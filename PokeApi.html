@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PokeApi</title>
+    <title>PokeApi - Executive Dashboard</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,42 +12,61 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="container py-5">
-      <h2 class="text-center py-5">PokeApi</h2>
+  <body class="bg-secondary bg-opacity-10">
+    <nav class="navbar navbar-dark bg-dark shadow-sm mb-4">
+      <div class="container justify-content-center">
+        <span class="navbar-brand mb-0 h1 fw-bold tracking-wide"
+          >⚡ PokeAPI ⚡</span
+        >
+      </div>
+    </nav>
 
-      <div class="card shadow-sm p-4 mb-4 bg-white">
-        <div class="input-group">
-          <input
-            type="text"
-            id="idPokemon"
-            class="form-control"
-            placeholder="Escribe id o nombrede un pokemon..."
-          />
-          <button class="btn btn-primary" id="btnSearch">Encontrar</button>
-          <button id="btnRandom" class="btn btn-warning text-dark">
-            Aleatoriamente
-          </button>
+    <div class="container pb-5">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-7">
+          <div class="card shadow border-0 p-3 bg-white rounded-3">
+            <label
+              for="idPokemon"
+              class="form-label text-muted small fw-bold mb-2"
+              >BUSCANDO INTEGRANTES</label
+            >
+            <div class="input-group">
+              <input
+                type="text"
+                id="idPokemon"
+                class="form-control border-secondary border-opacity-25"
+                placeholder="Escribe id o nombrede un pokemon..."
+              />
+              <button class="btn btn-dark px-4" id="btnSearch">
+                Encontrar
+              </button>
+              <button id="btnRandom" class="btn btn-outline-secondary">
+                Aleatorio
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!--card-->
-      <div class="row justify-content-center" id="card-Container-pokemon">
-        datos...
+      <div class="row justify-content-center mb-5" id="card-Container-pokemon">
+        <div class="col-md-4 text-center text-muted py-3"></div>
       </div>
 
-      <!--table-->
-      <div>
-        <h4>Mi compañeros Pokemon</h4>
+      <!-- Tabla  -->
+      <div class="card shadow border-0 p-4 bg-white rounded-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-secondary fw-bold m-0 fs-5">Mi Equipo Pokemon</h4>
+          <span class="badge bg-dark">Límite: 6</span>
+        </div>
         <div class="table-responsive">
-          <table>
-            <thead>
+          <table class="table table-hover align-middle text-center mb-0">
+            <thead class="table-dark text-uppercase fs-7">
               <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Habilidades</th>
-                <th>Experiencia</th>
+                <th class="py-3">Imagen</th>
+                <th class="py-3">Nombre</th>
+                <th class="py-3">Tipo</th>
+                <th class="py-3">Habilidades</th>
+                <th class="py-3">Experiencia</th>
               </tr>
             </thead>
             <tbody id="TableBody"></tbody>
@@ -55,7 +75,7 @@
       </div>
     </div>
 
-    <!--Conectar co el js-->
+    <!-- Conectar con el JS -->
     <script src="main.js"></script>
   </body>
 </html>

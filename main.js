@@ -39,13 +39,13 @@ async function fetchApi( param ) {
 
         //pintar tarjeta con botón para añadir al equipo
         card.innerHTML = `
-        <div class="col-md-6">
-            <div class="card shadow text-center p-3">
-                <img src="${listPokemon.sprites.front_default}" class="card-img-top mx-auto" style="width: 120px;" alt="${listPokemon.name}">
+        <div class="col-md-4 col-sm-6">
+            <div class="card shadow-sm text-center border-0 bg-white rounded-3 p-3">
+                <img src="${listPokemon.sprites.front_default}" class="card-img-top mx-auto" style="width: 250px;" alt="${listPokemon.name}">
                 <div class="card-body">
                     <h4 class="text-capitalize">${listPokemon.name}</h4>
-                    <p>Id: ${listPokemon.id}</p>
-                    <p class="mb-2"><strong>Tipo:</strong> ${tiposPokemon}</p>
+                    <p class="text-muted small mb-2">Id: ${listPokemon.id}</p>
+                    <div class="mb-3"><strong>Tipo:</strong> ${tiposPokemon}</div>
                     <button class="btn btn-success btn-sm mt-2" id="btnAddTeam">Añadir a mi Equipo</button>
                 </div> 
             </div>
