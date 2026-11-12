@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeApi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container py-5">
+      <h2 class="text-center py-5">PokeApi</h2>
+
+      <div class="card shadow-sm p-4 mb-4 bg-white">
+        <div class="input-group">
+          <input
+            type="text"
+            id="idPokemon"
+            class="form-control"
+            placeholder="Escribe id o nombrede un pokemon..."
+          />
+          <button class="btn btn-primary" id="btnSearch">Encontrar</button>
+          <button id="btnRandom" class="btn btn-warning text-dark">
+            Aleatoriamente
+          </button>
+        </div>
+      </div>
+
+      <!--card-->
+      <div class="row justify-content-center" id="card-Container-pokemon">
+        datos...
+      </div>
+
+      <!--table-->
+      <div>
+        <h4>Mi compañeros Pokemon</h4>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Habilidades</th>
+                <th>Experiencia</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!--Conectar co el js-->
+    <script src="main.js"></script>
+  </body>
+</html>
